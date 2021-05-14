@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			background-color: #385399; font-weight: bold;font-size: 25px; color: white;
+		}
+		p{
+			background-color: #1E3E72;position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); padding: 10px 10px 10px 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<p id="apinepal">	</p>
+	<script type="text/javascript">
+	
+	function getcoviddata (indexs) {
+		
+	fetch('https://api.covid19api.com/summary').then((apidata) => {
+	// console.log(apidata);	//fetch data and store in apidata if resolve
+
+	return apidata.json();
+		}).then ((actualdata) => {
+			// console.log(actualdata);	//display all api data
+			// console.log(actualdata.Countries[120]);	//display index 120
+			const mydata = actualdata.Countries[`${indexs}`];
+
+			document.getElementById('apinepal').innerHTML = `${mydata.Country}<hr><br> Total confimed cases: 	${mydata.TotalConfirmed} <br> Total deaths cases: 	${mydata.TotalDeaths}<br> Total recovered cases: 	${mydata.TotalRecovered}`;
+
+			console.log(`The name of the country is ${mydata.Country}. The total confimed cases here is ${mydata.TotalConfirmed}. The total deaths cases here is ${mydata.TotalDeaths}. The total recovered cases here is ${mydata.TotalRecovered}`);
+
+		}).catch ((error) => {
+			console.log(error); //show error if rejected
+		});
+		}
+
+		getcoviddata(25);
+		getcoviddata(18);
+		getcoviddata(120);
+		getcoviddata(154);
+		getcoviddata(29);
+		getcoviddata(120);
+
+
+		
+	</script>
+	
+
+</body>
+</html>

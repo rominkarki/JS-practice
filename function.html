@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		//without parameter
+		add();
+		function add(){
+			var a = 10;
+			var b = 20;
+			sum = a + b;
+			document.write("the sum of two number is"+ " " + sum);
+			document.write("<br>");
+			document.write("<br>");
+
+		}
+
+		//with parameter
+		sub(20, 10)
+		sub(30, 15)
+		sub(247, 123)
+		function sub(x, y){
+			var sub = x - y;
+			document.write("the difference of two number is" + " " + sub);
+			document.write("<br>");
+		}
+
+		//with return
+		var stored = mul(12, 4);
+		document.write("<br>");
+		document.write("the product of two number is"+ " " + stored)
+		function mul(m, n){
+			var mul = m * n ;
+			return mul;
+		}
+		
+
+	</script>
+
+</body>
+</html>

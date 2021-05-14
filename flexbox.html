@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <style>
+  *{}
+  section{ width: 50%; background: black; color: white;
+}
+
+  section div{;
+   border:1px solid black;
+
+  }
+
+  .flexone{
+   flex:2;
+   background: red;
+  }
+
+  .flextwo{
+   flex:1;
+   background: blue;}
+
+  .flexthree{
+   flex:2;
+   background: green;} 
+
+  @media(min-width: 768px){
+   section{
+    display: flex;
+    justify-content: space-between;
+    
+   }
+  }
+
+ </style>
+</head>
+<body>
+
+<section>
+ 
+ <div class="flexone"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat.</div>
+
+ <div class="flextwo"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua. </div>
+
+ <div class="flexthree"> Three  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat. </div>
+</section>
+
+</body>
+</html>

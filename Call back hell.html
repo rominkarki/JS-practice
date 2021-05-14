@@ -1,0 +1,46 @@
+<!--
+callBack are only used when doing I/O e.g. downloading things , reading files talking to database etc
+
+call back hell basically means callling again and again.
+-->
+
+
+<script>
+//conditon
+//  1. after 2 sec rollno fetch garne
+//  2. tesko 2 sec paxi, euta rollno chose grna ani tesko name ra age nikalne
+//  3. tesko 2 sec paxi, tyo student ko gender nikalne
+// 
+    
+const getRollNo = () => {
+    setTimeout ( () => {
+        console.log('API getting Roll no.');
+        //basically api use garda calback use garxan, yeha api use nagarera aafai define garekoxa 
+        let roll_no = [1,2,3,4,5];
+        console.log(roll_no);
+        
+        
+        setTimeout( (rollno) => {
+            const biodata = {
+                name : 'roman',
+                age : 22
+            }
+            console.log(`My name is ${biodata.name}. I'm ${biodata.age} years old. My roll no is ${rollno}`)
+            
+            
+            setTimeout ( (name) => {
+                biodata.gender = 'male';
+                console.log(`My name is ${biodata.name}. I'm ${biodata.age} years old. My roll no is ${rollno} , gender is ${biodata.gender}`)
+            },2000, biodata.name);
+            
+        },2000, roll_no[2]);
+        
+    },2000);
+    
+}
+
+getRollNo();
+
+
+
+</script>

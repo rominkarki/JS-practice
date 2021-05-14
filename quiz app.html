@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz app</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style type="text/css">
+		body{
+			background-color: brown;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="color: yellow;">Who wants to be the trillionaire QUIZ</h1><br>
+	
+	1. Who is the only trillionaire in the earth?<br>
+	<input type="radio" name="ques1">Sagar<br>
+	<input type="radio" name="ques1">Aakash<br>
+	<input type="radio" name="ques1" id="correct1">Roman<br>
+	<input type="radio" name="ques1">Vivek<br><br>
+
+	2. Who is the only billionaire in the world?<br>
+	<input type="radio" name="ques2">Aakash<br>
+	<input type="radio" name="ques2">Vivek<br>
+	<input type="radio" name="ques2">Sagar<br>
+	<input type="radio" name="ques2" id="correct2">Roman<br><br>
+
+	3. Who is the only millionaire in the world?<br>
+	<input type="radio" name="ques3">Aakash<br>
+	<input type="radio" name="ques3" id="correct3">Roman<br>
+	<input type="radio" name="ques3">Sagar<br>
+	<input type="radio" name="ques3">Vivek<br><br>
+
+	<input type="submit" name="submit" value="SUBMIT" onclick="result()">
+
+	<script type="text/javascript">
+		function result() {
+			var score = 0;
+			if (document.getElementById('correct1').checked) {
+				score++;
+			}
+			if (document.getElementById('correct2').checked) {
+				score++;
+			}
+			if (document.getElementById('correct3').checked) {
+				score++;
+			}
+			document.write("Your score is:" + score);
+		}
+	</script>
+</body>
+</html>

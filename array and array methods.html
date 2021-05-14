@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+		document.write(days); //display whole array
+		document.write("<br>");
+		document.write("the fourth day is"+" "+days[3]);	//display specific element 
+		document.write("<br>");
+
+		var length = days.length; //find length
+		document.write(length);
+		document.write("<br>");
+
+		days.sort();	//sorting
+		document.write(days);
+		document.write("<br>");
+
+		days.push('holiday');	//add to the end
+		document.write(days);
+		document.write("<br>");
+
+		days.pop();		//remove last element
+		document.write(days);
+		document.write("<br>");
+
+		days.shift();	//remove first element
+		document.write(days);
+		document.write("<br>");
+
+		days.unshift('romin');		//add element to first
+		document.write(days);
+		document.write("<br>");
+
+		days.reverse();		//reverse
+		document.write(days);
+		document.write("<br>");
+
+		var check = Array.isArray(days);	//find if array is true
+		document.write(check);
+		document.write("<br>");
+
+		var lang = ['python','java','lara'];
+		document.write(days.concat(lang));		//add one array with another
+		document.write("<br>");
+		document.write(days.indexOf('sat'));	//find the indes of the element of the index
+
+
+	</script>
+
+</body>
+</html>

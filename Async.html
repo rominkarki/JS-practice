@@ -1,0 +1,97 @@
+<!--
+Async/await
+await async snga matra use hunxa
+
+there is a special syntax to work with promises in a more comfortable way called async await. it is easy to understand and use. 
+promise ma then then use gareko garai grnu prxa, tesko soln
+
+the word 'async' before a function means one simple thing: a function always return a promise
+
+so the async keyword is added to function to tell them to return a promise rather than directly returning the value.
+
+we can use "await" when calling any function that returns a Promise, including a web API function
+
+The keyword await makes JS wait until that promise settles and return its result.
+-->
+
+
+<script>
+
+//Promise produced
+const pobj1 = new Promise( (resolve, reject) => {
+    setTimeout( () => {
+        let roll_no = [1,2,3,4,5];
+        resolve(roll_no);
+//        reject('Error while comunicating')
+    }, 2000);
+    
+});
+
+    
+    
+const getBiodata = (indexdata) => {
+    return new Promise( (resolve, reject) => {
+        setTimeout( (indexdata) =>{
+            let biodata = {
+                name: 'roman',
+                age : 22
+            }
+            resolve(` My name is ${biodata.name}. My roll no is ${indexdata}`);
+            
+        },2000, indexdata)
+    })
+}
+    
+    
+    
+////promise consume
+//pobj1.then((rollno) => {
+//    console.log(rollno);
+////    getBiodata(rollno[1]).then( (item) =>{
+////        console.log(item);
+////    yo dui code ajha ramrari lekhna milxa
+//    return getBiodata(rollno[1]); 
+//}).then( (item) =>{
+//    console.log(item);
+//    })
+//.catch((error) => {
+//    console.log(error);
+//})
+
+
+//mathi comment gareko code lai nai async ma lekhne,,,,,,
+    
+async function getData(){
+    try{
+        const rollnodata = await pobj1;
+        console.log(rollnodata);
+
+        const biodatas = await getBiodata(rollnodata[2]);
+        console.log(biodassdtas);
+
+    //    mathi ko code le name dinxa, if we want to use it for future in ouw owan way then return garnu prxa
+        return biodatas;
+
+    } catch(error){
+        console.log(`The error is: ${error}`);
+    }
+    
+}
+
+//getData();
+    
+//return garda ko code
+const getname = getData().then((myname) => {
+    console.log(myname);
+})
+    
+    
+    
+    
+
+
+
+</script>
+
+
+

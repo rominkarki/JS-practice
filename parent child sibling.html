@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="name"> Roman</p>
+	<p class="sur"> Karki</p>
+	<p class="sur"> Janakinagar</p>
+	<p class="sur"> Butwal</p>
+	<ul><li>Apple</li>
+		<li>Ball</li>
+		<li>Cat</li></ul>
+
+	<!-- Access childres of a body -->
+	<script type="text/javascript">
+		var child = document.body.children;
+		console.log(child);
+
+		// adding child to body
+		var para = document.createElement("p")
+		var textNode = document.createTextNode("this is a new para");
+		para.appendChild(textNode);
+		console.log(para);
+		document.body.appendChild(para);
+
+	// Access first child
+	var list = document.querySelector("ul");
+	console.log(list);
+
+	console.log(list.firstChild);
+	console.log(list.lastChild);
+
+	var firstsiblings = name.nextElementSibling.nextElementSibling;
+	console.log(firstsiblings);
+
+	console.log(list.parentNode);
+
+
+	</script>
+
+</body>
+</html>

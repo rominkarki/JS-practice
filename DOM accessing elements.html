@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p id="name"> Roman </p>
+	<p class="sur"> Karki</p>
+	<p class="sur"> Janakinagar</p>
+	<p class="sur"> Butwal</p>
+
+	<!-- Access element by ID -->
+	<script type="text/javascript">
+		var a = document.getElementById("name").innerHTML;
+		document.write(a);
+	</script>
+
+	<!-- Access element by class -->
+	<script type="text/javascript">
+		var b = document.getElementsByClassName("sur")[1].innerHTML; //when accessing element by class use index like in array
+		document.write(b);
+		document.write("<br>");
+	</script>
+
+	<!-- Access element by tag name -->
+	<script type="text/javascript">
+		var tag = document.getElementsByTagName('sur').innerHTML;
+		document.write(tag);
+		document.write("<br>");
+	</script>
+
+	<!-- Access element by tagname -->
+	<script type="text/javascript">
+		var p = document.querySelector('p').innerHTML;
+		document.write(p);
+		document.write("<br>");
+	</script>
+
+
+</body>
+</html>
